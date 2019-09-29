@@ -2,9 +2,8 @@
     "type": "minecraft:crafting_shaped",
     "pattern":
     [
-        "xxx",
-        "xxx",
-        "xxx"
+        "xx",
+        "xx"
     ],
     "key":
     {
@@ -17,6 +16,6 @@
     {
         "item": "cobra:chalk_block",
         "data": 0,
-        "count": 4
+        "count": 1
     }
 }
