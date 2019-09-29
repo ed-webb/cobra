@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xxx",
+        "xxx",
+        "xxx"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "cobra:chalk_dust"
+        }
+    },
+    "result":
+    {
+        "item": "cobra:chalk_block",
+        "data": 0,
+        "count": 4
+    }
+}

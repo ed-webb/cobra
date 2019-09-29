@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": [
+            { "model": "cobra:block/chalk_block" }
+        ]
+    }
+}
