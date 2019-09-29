@@ -14,8 +14,6 @@
     },
     "result":
     {
-        "item": "cobra:chalk_block",
-        "data": 0,
-        "count": 1
+        "item": "cobra:chalk_block"
     }
 }

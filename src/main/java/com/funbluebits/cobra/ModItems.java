@@ -18,6 +18,7 @@ import net.minecraftforge.registries.ObjectHolder;
 public class ModItems {
 
     public static final Item chalk_dust = null;
+    public static final Item oak_pole = null;
 
     /**
      * The actual event handler that registers the custom items.
@@ -32,7 +33,8 @@ public class ModItems {
 
             // stackable to 64, add to Creative MISC tab, register the item.
             new Item(new Item.Properties().maxStackSize(64).group(ItemGroup.MISC)).setRegistryName(CobraMod.MOD_ID, "chalk_dust"),
-            new BlockItem(ModBlocks.chalk_block, new Item.Properties().maxStackSize(64).group(ItemGroup.MISC)).setRegistryName(CobraMod.MOD_ID, "chalk_block")
+            new BlockItem(ModBlocks.chalk_block, new Item.Properties().maxStackSize(64).group(ItemGroup.MISC)).setRegistryName(CobraMod.MOD_ID, "chalk_block"),
+            new Item(new Item.Properties().maxStackSize(1).group(ItemGroup.MISC)).setRegistryName(CobraMod.MOD_ID, "oak_pole")
         );
     }
 

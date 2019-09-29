@@ -3,12 +3,11 @@
   "pools": [
     {
       "name": "chalk_block",
-      "rolls": 1,
+      "rolls": 4,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "cobra:chalk_dust",
-          "count": 4
+          "name": "cobra:chalk_dust"
         }
       ],
       "conditions": [

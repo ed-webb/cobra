@@ -2,19 +2,19 @@
     "type": "minecraft:crafting_shaped",
     "pattern":
     [
+        "x",
+        "x",
         "x"
     ],
     "key":
     {
         "x":
         {
-            "item": "cobra:chalk_block"
+            "item": "minecraft:stick"
         }
     },
     "result":
     {
-        "item": "cobra:chalk_dust",
-        "data": 0,
-        "count": 4
+        "item": "cobra:oak_pole"
     }
 }

@@ -1,4 +1,5 @@
 {
-    "item.cobra.chalk_dust": "Chalk Dust",
-    "block.cobra.chalk_block": "Chalk Block"
+    "item.cobra.chalk_dust": "Chalk Dust"
+    ,"block.cobra.chalk_block": "Chalk Block"
+    ,"item.cobra.oak_pole": "Pole"
 }
