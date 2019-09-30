@@ -1,7 +1,16 @@
 {
     "variants": {
-        "": [
+        "facing=north": [
             { "model": "cobra:block/vertical_oak_slab" }
+        ]
+        ,"facing=south": [
+            { "model": "cobra:block/vertical_oak_slab", "y": 180 }
+        ]
+        ,"facing=east": [
+            { "model": "cobra:block/vertical_oak_slab", "y": 270 }
+        ]
+        ,"facing=west": [
+            { "model": "cobra:block/vertical_oak_slab", "y": 90 }
         ]
     }
 }

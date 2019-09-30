@@ -1,5 +1,9 @@
 package com.funbluebits.cobra;
 
+/**
+ * Unlike horizontal slabs which have a top and bottom version, these face a direction, being placed in the same direction as the player
+ * The rear face of the block is the half filled with plank, so when it is facing:north, the north side has air in it.
+ */
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;
@@ -13,7 +17,6 @@ import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.state.properties.SlabType;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.Direction;
@@ -34,14 +37,17 @@ public class VerticalSlabBlock extends HorizontalBlock implements IWaterLoggable
      this.setDefaultState(this.getDefaultState().with(FACING, Direction.NORTH).with(WATERLOGGED, Boolean.valueOf(false)));
   }
 
+  @Override
   public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
      return SHAPE;
   }
 
+  @Override
   public BlockState getStateForPlacement(BlockItemUseContext context) {
     return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing());
   }
 
+  @Override
   protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
     builder.add(FACING, WATERLOGGED);
   }
@@ -52,21 +58,25 @@ public class VerticalSlabBlock extends HorizontalBlock implements IWaterLoggable
    * 
    * Without this, blocks placed next to it cull their adjacent faces and we can see through the world.
    */
+  @Override
   public BlockRenderLayer getRenderLayer() {
      return BlockRenderLayer.CUTOUT;
   }
 
+  @Override
   public IFluidState getFluidState(BlockState state) {
     return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
  }
 
- public boolean receiveFluid(IWorld worldIn, BlockPos pos, BlockState state, IFluidState fluidStateIn) {
+  @Override
+  public boolean receiveFluid(IWorld worldIn, BlockPos pos, BlockState state, IFluidState fluidStateIn) {
     return IWaterLoggable.super.receiveFluid(worldIn, pos, state, fluidStateIn);
- }
+  }
 
- public boolean canContainFluid(IBlockReader worldIn, BlockPos pos, BlockState state, Fluid fluidIn) {
+  @Override
+  public boolean canContainFluid(IBlockReader worldIn, BlockPos pos, BlockState state, Fluid fluidIn) {
     return IWaterLoggable.super.canContainFluid(worldIn, pos, state, fluidIn);
- }
+  }
 
  /**
   * Update the provided state given the provided neighbor facing and neighbor state, returning a new state.
@@ -74,15 +84,17 @@ public class VerticalSlabBlock extends HorizontalBlock implements IWaterLoggable
   * returns its solidified counterpart.
   * Note that this method should ideally consider only the specific face passed in.
   */
- public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos) {
+  @Override
+  public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos) {
     if (stateIn.get(WATERLOGGED)) {
        worldIn.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
     }
 
     return super.updatePostPlacement(stateIn, facing, facingState, worldIn, currentPos, facingPos);
- }
+  }
 
- public boolean allowsMovement(BlockState state, IBlockReader worldIn, BlockPos pos, PathType type) {
+  @Override
+  public boolean allowsMovement(BlockState state, IBlockReader worldIn, BlockPos pos, PathType type) {
     switch(type) {
     case LAND:
        return false;
@@ -93,5 +105,5 @@ public class VerticalSlabBlock extends HorizontalBlock implements IWaterLoggable
     default:
        return false;
     }
- }
+  }
 }
