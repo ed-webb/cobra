@@ -18,6 +18,7 @@ import net.minecraftforge.registries.ObjectHolder;
 public class ModBlocks {
 
     public static final Block chalk_block = null;
+    public static final Block vertical_oak_slab = null;
 
     /**
      * The actual event handler that registers the custom blocks.
@@ -30,7 +31,8 @@ public class ModBlocks {
         //Make sure you always set the registry name.
         event.getRegistry().registerAll(
 
-            new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(5).harvestLevel(1).harvestTool(ToolType.PICKAXE)).setRegistryName(CobraMod.MOD_ID, "chalk_block")
+            new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(5).harvestLevel(1).harvestTool(ToolType.PICKAXE)).setRegistryName(CobraMod.MOD_ID, "chalk_block"),
+            new VerticalSlabBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(5).harvestLevel(1).harvestTool(ToolType.AXE)).setRegistryName(CobraMod.MOD_ID, "vertical_oak_slab")
 
         );
     }
