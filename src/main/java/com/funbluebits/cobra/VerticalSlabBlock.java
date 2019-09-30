@@ -2,7 +2,7 @@ package com.funbluebits.cobra;
 
 /**
  * Unlike horizontal slabs which have a top and bottom version, these face a direction, being placed in the same direction as the player
- * The rear face of the block is the half filled with plank, so when it is facing:north, the north side has air in it.
+ * The rear face of the block is the half filled with air, so when it is facing:north, the north side has planks in it.
  */
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -30,7 +30,10 @@ public class VerticalSlabBlock extends HorizontalBlock implements IWaterLoggable
   public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
   public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-  protected static final VoxelShape SHAPE = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 8.0D);
+  protected static final VoxelShape NORTH_SHAPE = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 8.0D);
+  protected static final VoxelShape SOUTH_SHAPE = Block.makeCuboidShape(0.0D, 0.0D, 8.0D, 16.0D, 16.0D, 16.0D);
+  protected static final VoxelShape WEST_SHAPE = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 8.0D, 16.0D, 16.0D);
+  protected static final VoxelShape EAST_SHAPE = Block.makeCuboidShape(8.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D);
 
   protected VerticalSlabBlock(Block.Properties properties) {
      super(properties);
@@ -43,7 +46,19 @@ public class VerticalSlabBlock extends HorizontalBlock implements IWaterLoggable
   @Override
   @Deprecated
   public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
-     return SHAPE;
+    switch (state.get(FACING))
+    {
+      case NORTH:
+        return NORTH_SHAPE;
+      case SOUTH:
+        return SOUTH_SHAPE;
+      case EAST:
+        return EAST_SHAPE;
+      case WEST:
+        return WEST_SHAPE;
+      default:
+        return NORTH_SHAPE;
+    }
   }
 
   @Override
