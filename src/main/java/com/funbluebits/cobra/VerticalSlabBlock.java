@@ -37,7 +37,11 @@ public class VerticalSlabBlock extends HorizontalBlock implements IWaterLoggable
      this.setDefaultState(this.getDefaultState().with(FACING, Direction.NORTH).with(WATERLOGGED, Boolean.valueOf(false)));
   }
 
+  /**
+   * @deprecated
+   */
   @Override
+  @Deprecated
   public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
      return SHAPE;
   }
@@ -63,7 +67,11 @@ public class VerticalSlabBlock extends HorizontalBlock implements IWaterLoggable
      return BlockRenderLayer.CUTOUT;
   }
 
+  /**
+   * @deprecated
+   */
   @Override
+  @Deprecated
   public IFluidState getFluidState(BlockState state) {
     return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
  }
@@ -83,8 +91,10 @@ public class VerticalSlabBlock extends HorizontalBlock implements IWaterLoggable
   * For example, fences make their connections to the passed in state if possible, and wet concrete powder immediately
   * returns its solidified counterpart.
   * Note that this method should ideally consider only the specific face passed in.
+  * @deprecated
   */
   @Override
+  @Deprecated
   public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos) {
     if (stateIn.get(WATERLOGGED)) {
        worldIn.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
@@ -93,7 +103,11 @@ public class VerticalSlabBlock extends HorizontalBlock implements IWaterLoggable
     return super.updatePostPlacement(stateIn, facing, facingState, worldIn, currentPos, facingPos);
   }
 
+  /**
+   * @deprecated
+   */
   @Override
+  @Deprecated
   public boolean allowsMovement(BlockState state, IBlockReader worldIn, BlockPos pos, PathType type) {
     switch(type) {
     case LAND:
