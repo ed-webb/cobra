@@ -45,16 +45,16 @@ public class CobraMod
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private static BiomeManager.BiomeType[] biomeTypes = { BiomeManager.BiomeType.DESERT, BiomeManager.BiomeType.WARM, BiomeManager.BiomeType.COOL, BiomeManager.BiomeType.ICY };
+    private static final BiomeManager.BiomeType[] biomeTypes = { BiomeManager.BiomeType.DESERT, BiomeManager.BiomeType.WARM, BiomeManager.BiomeType.COOL, BiomeManager.BiomeType.ICY };
     
     private void setup(final FMLCommonSetupEvent event)
     {
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
         // Add the blocks that we want to be in the world generation as features of the biome
-        int size = 7;
-        Placement<CountRangeConfig> placementIn = Placement.COUNT_RANGE;  // TODO not sure if this is the correct one!
-        CountRangeConfig crc = new CountRangeConfig(1, 40, 70, 90);  //Count (per chunk?), MinHeight, MaxHeightBase, MaxHeight
+        int size = 7; // TODO Should this be more random?
+        Placement<CountRangeConfig> placementIn = Placement.COUNT_RANGE;
+        CountRangeConfig crc = new CountRangeConfig(10, 40, 70, 90);  // Vein/Chunk, MinHeight, MaxHeightBase, MaxHeight
         for (BiomeManager.BiomeType biomeType : biomeTypes) {
           for (BiomeManager.BiomeEntry entry : BiomeManager.getBiomes(biomeType)) {
             entry.biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,   
