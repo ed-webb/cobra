@@ -22,6 +22,9 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.funbluebits.cobra.client.renders.CobraRenderRegistry;
+import com.funbluebits.cobra.client.renders.SnakeRenderer;
+
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod("cobra")
 public class CobraMod
@@ -39,7 +42,7 @@ public class CobraMod
 //        // Register the processIMC method for modloading
 //        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
         // Register the doClientStuff method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientRegistries);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -64,9 +67,10 @@ public class CobraMod
         }
     }
 
-    private void doClientStuff(final FMLClientSetupEvent event) {
+    private void clientRegistries(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
         LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
+        CobraRenderRegistry.registryEntityRenders();
     }
 
 //    private void enqueueIMC(final InterModEnqueueEvent event)

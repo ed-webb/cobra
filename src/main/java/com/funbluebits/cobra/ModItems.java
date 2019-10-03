@@ -25,6 +25,8 @@ public class ModItems {
     public static final Item flesh_stew = null;
     public static final Item wooden_flute = null;
     
+    public static Item green_snake_egg = null;
+    
     private static final Food FOOD_FLESH_STEW = (new Food.Builder()).hunger(8).saturation(1.0F).meat().build();
     
     /**
@@ -46,6 +48,7 @@ public class ModItems {
             ,new Item(new Item.Properties().maxStackSize(16).group(ItemGroup.MISC)).setRegistryName(CobraMod.MOD_ID, "wooden_flute")
             ,new Item((new Item.Properties()).group(ItemGroup.FOOD).food(FOOD_FLESH_STEW)).setRegistryName("flesh_stew")
         );
+        ModEntities.registerEntitySpawnEggs(event);
     }
 
 }
