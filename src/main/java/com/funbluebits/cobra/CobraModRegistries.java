@@ -5,22 +5,12 @@ import com.funbluebits.cobra.init.ModBlocks;
 import com.funbluebits.cobra.init.ModItems;
 import com.funbluebits.cobra.init.ModEntities;
 
-import org.apache.logging.log4j.Logger;
-
 import net.minecraft.block.Block;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EntityType;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ArmorItem;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ShovelItem;
-import net.minecraft.item.SwordItem;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -64,7 +54,7 @@ public class CobraModRegistries {
    * @param event The event this event handler handles
    */
   @SubscribeEvent
-  public static void registerBlocks(RegistryEvent.Register<Block> event) {
+  public static void registerBlocks(final RegistryEvent.Register<Block> event) {
       //In here you pass in all block instances you want to register.
       //Make sure you always set the registry name.
       event.getRegistry().registerAll(

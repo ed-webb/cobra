@@ -1,11 +1,18 @@
 package com.funbluebits.cobra.client.models;
 
+/**
+ * After exporting the java from BlockBench - https://blockbench.net/
+ * Do these conversions:
+ * 1. For 1.14.4 ModelRenderer is replaced by RendererModel (case sensitive or check that method setRotationAngle() has not been messed up).
+ * 2. ModelBase is replaced by EntityModel<SnakeEntity> Use your specific entity class here
+ * 3. Add the imports as below.
+ * 4. Use the @OnlyIn(Dist.CLIENT) annotation.
+ */
 import com.funbluebits.cobra.entities.SnakeEntity;
 
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.model.RendererModel;
 import net.minecraft.client.renderer.model.ModelBox;
-import net.minecraft.entity.Entity;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
@@ -56,10 +63,10 @@ public class SnakeModel extends EntityModel<SnakeEntity> {
     t4.render(f5);
     t5.render(f5);
   }
-  public void setRotationAngle(RendererModel RendererModel, float x, float y, float z) {
-    RendererModel.rotateAngleX = x;
-    RendererModel.rotateAngleY = y;
-    RendererModel.rotateAngleZ = z;
+  public void setRotationAngle(RendererModel rendererModel, float x, float y, float z) {
+    rendererModel.rotateAngleX = x;
+    rendererModel.rotateAngleY = y;
+    rendererModel.rotateAngleZ = z;
   }
 
 }
