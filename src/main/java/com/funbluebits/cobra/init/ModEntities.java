@@ -11,19 +11,20 @@ import net.minecraft.item.SpawnEggItem;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.registries.ObjectHolder;
 
+@ObjectHolder(CobraMod.MOD_ID)
 public class ModEntities {
 
   private ModEntities() {
     // Private constructor hides public one.
   }
   
-  public static final EntityType<?> green_snake = EntityType.Builder.create(SnakeEntity::new, EntityClassification.CREATURE).build(CobraMod.MOD_ID + ":green_snake")
-      .setRegistryName(CobraMod.MOD_ID, "green_snake");
+  public static final EntityType<?> green_snake = null;
   
   public static void registerEntitySpawnEggs(final RegistryEvent.Register<Item> event) {
     event.getRegistry().registerAll(
-        ModItems.green_snake_egg = registerEntitySpawnEgg(green_snake, 0x156b1a, 0xfaef1e, "green_snake_egg")   // green and yellow
+       registerEntitySpawnEgg(green_snake, 0x156b1a, 0xfaef1e, "green_snake_egg")   // green and yellow
         );
   }
   

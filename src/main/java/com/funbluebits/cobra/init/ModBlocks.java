@@ -1,10 +1,14 @@
 package com.funbluebits.cobra.init;
 
-import net.minecraft.block.Block;
+import com.funbluebits.cobra.CobraMod;
 
+import net.minecraft.block.Block;
+import net.minecraftforge.registries.ObjectHolder;
+
+@ObjectHolder(CobraMod.MOD_ID)
 public class ModBlocks {
 
-  public static Block chalk_block;
-  public static Block vertical_oak_slab;
+  public static final Block chalk_block = null;
+  public static final Block vertical_oak_slab = null;
 
 }

@@ -55,7 +55,7 @@ public class CobraMod
         // Add the blocks that we want to be in the world generation as features of the biome
         int size = 7; // TODO Should this be more random?
         Placement<CountRangeConfig> placementIn = Placement.COUNT_RANGE;
-        CountRangeConfig crc = new CountRangeConfig(10, 40, 70, 90);  // Vein/Chunk, MinHeight, MaxHeightBase, MaxHeight
+        CountRangeConfig crc = new CountRangeConfig(10, 40, 0, 90);  // Vein/Chunk, MinHeight, MaxHeightBase, MaxHeight
         for (BiomeManager.BiomeType biomeType : biomeTypes) {
           for (BiomeManager.BiomeEntry entry : BiomeManager.getBiomes(biomeType)) {
             entry.biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,   

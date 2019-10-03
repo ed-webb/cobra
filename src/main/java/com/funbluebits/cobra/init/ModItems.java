@@ -1,17 +1,21 @@
 package com.funbluebits.cobra.init;
 
+import com.funbluebits.cobra.CobraMod;
+
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
+import net.minecraftforge.registries.ObjectHolder;
 
+@ObjectHolder(CobraMod.MOD_ID)
 public class ModItems {
 
-  public static Item chalk_dust;
-  public static Item oak_pole;
-  public static Item flesh_stew;
-  public static Item wooden_flute;
-  public static Item chalk_block;
-  public static Item vertical_oak_slab;
-  public static Item green_snake_egg;
+  public static final Item chalk_dust = null;
+  public static final Item oak_pole = null;
+  public static final Item flesh_stew = null;
+  public static final Item wooden_flute = null;
+  public static final Item chalk_block = null;
+  public static final Item vertical_oak_slab = null;
+  public static final Item green_snake_egg = null;
   
   public static final Food FOOD_FLESH_STEW = (new Food.Builder()).hunger(8).saturation(1.0F).meat().build();
 }
