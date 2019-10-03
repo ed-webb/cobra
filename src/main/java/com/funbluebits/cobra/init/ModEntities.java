@@ -1,5 +1,7 @@
-package com.funbluebits.cobra;
+package com.funbluebits.cobra.init;
 
+import com.funbluebits.cobra.CobraMod;
+import com.funbluebits.cobra.ModItems;
 import com.funbluebits.cobra.entities.SnakeEntity;
 
 import net.minecraft.entity.EntityClassification;
@@ -10,11 +12,10 @@ import net.minecraft.item.SpawnEggItem;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class ModEntities {
 
-  public static EntityType<?> green_snake = EntityType.Builder.create(SnakeEntity::new, EntityClassification.CREATURE).build(CobraMod.MOD_ID + ":green_snake")
+  public static final EntityType<?> green_snake = EntityType.Builder.create(SnakeEntity::new, EntityClassification.CREATURE).build(CobraMod.MOD_ID + ":green_snake")
       .setRegistryName(CobraMod.MOD_ID, "green_snake");
   
   public static void registerEntitySpawnEggs(final RegistryEvent.Register<Item> event) {
@@ -49,11 +50,5 @@ public class ModEntities {
     
   }
 
-  @SubscribeEvent
-  public static void registerEntities(final RegistryEvent.Register<EntityType<?>> event) {
-    event.getRegistry().registerAll(
-        green_snake
-        );
-    registerEntityWorldSpawns();
-  }
+
 }

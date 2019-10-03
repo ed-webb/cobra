@@ -1,12 +1,11 @@
 package com.funbluebits.cobra.entities;
 
-import com.funbluebits.cobra.ModEntities;
+import com.funbluebits.cobra.init.ModEntities;
 
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
-import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.world.World;

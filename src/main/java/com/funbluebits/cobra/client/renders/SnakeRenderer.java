@@ -21,7 +21,7 @@ public class SnakeRenderer extends LivingRenderer<SnakeEntity, SnakeModel> {
 
   @Override
   protected ResourceLocation getEntityTexture(SnakeEntity entity) {
-    return new ResourceLocation(CobraMod.MOD_ID, "textures/green_snake.png");
+    return new ResourceLocation(CobraMod.MOD_ID, "textures/entity/green_snake.png");
   }
   
   public static class RenderFactory implements IRenderFactory<SnakeEntity> {

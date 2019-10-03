@@ -14,27 +14,8 @@ import net.minecraftforge.registries.ObjectHolder;
   Based on tutorial here https://suppergerrie2.com/minecraft-1-14-modding-with-forge-5-custom-basic-block/
  */
 @Mod.EventBusSubscriber(modid = CobraMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-@ObjectHolder(CobraMod.MOD_ID)
+//@ObjectHolder(CobraMod.MOD_ID)
 public class ModBlocks {
 
-    public static final Block chalk_block = null;
-    public static final Block vertical_oak_slab = null;
-
-    /**
-     * The actual event handler that registers the custom blocks.
-     *
-     * @param event The event this event handler handles
-     */
-    @SubscribeEvent
-    public static void registerBlocks(RegistryEvent.Register<Block> event) {
-        //In here you pass in all block instances you want to register.
-        //Make sure you always set the registry name.
-        event.getRegistry().registerAll(
-
-            new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(5).harvestLevel(1).harvestTool(ToolType.PICKAXE)).setRegistryName(CobraMod.MOD_ID, "chalk_block"),
-            new VerticalSlabBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(5).harvestLevel(1).harvestTool(ToolType.AXE)).setRegistryName(CobraMod.MOD_ID, "vertical_oak_slab")
-
-        );
-    }
 
 }

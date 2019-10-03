@@ -23,7 +23,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.funbluebits.cobra.client.renders.CobraRenderRegistry;
-import com.funbluebits.cobra.client.renders.SnakeRenderer;
+import com.funbluebits.cobra.init.ModBlocks;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod("cobra")
