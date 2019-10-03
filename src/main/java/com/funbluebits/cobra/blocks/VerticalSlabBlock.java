@@ -1,4 +1,4 @@
-package com.funbluebits.cobra;
+package com.funbluebits.cobra.blocks;
 
 /**
  * Unlike horizontal slabs which have a top and bottom version, these face a direction, being placed in the same direction as the player
@@ -35,7 +35,7 @@ public class VerticalSlabBlock extends HorizontalBlock implements IWaterLoggable
   protected static final VoxelShape WEST_SHAPE = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 8.0D, 16.0D, 16.0D);
   protected static final VoxelShape EAST_SHAPE = Block.makeCuboidShape(8.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D);
 
-  protected VerticalSlabBlock(Block.Properties properties) {
+  public VerticalSlabBlock(Block.Properties properties) {
      super(properties);
      this.setDefaultState(this.getDefaultState().with(FACING, Direction.NORTH).with(WATERLOGGED, Boolean.valueOf(false)));
   }
