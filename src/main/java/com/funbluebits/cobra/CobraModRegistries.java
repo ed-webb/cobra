@@ -4,6 +4,7 @@ import com.funbluebits.cobra.blocks.VerticalSlabBlock;
 import com.funbluebits.cobra.entities.SnakeEntity;
 import com.funbluebits.cobra.init.ModBlocks;
 import com.funbluebits.cobra.init.ModItems;
+import com.funbluebits.cobra.items.Foods;
 import com.funbluebits.cobra.init.ModEntities;
 
 import net.minecraft.block.Block;
@@ -32,10 +33,10 @@ public class CobraModRegistries {
         new Item(new Item.Properties().maxStackSize(1).group(ItemGroup.MISC)).setRegistryName(CobraMod.MOD_ID, "oak_pole"),
         new BlockItem(ModBlocks.vertical_oak_slab, new Item.Properties().maxStackSize(64).group(ItemGroup.MISC)).setRegistryName(CobraMod.MOD_ID, "vertical_oak_slab"),
         new Item(new Item.Properties().maxStackSize(16).group(ItemGroup.MISC)).setRegistryName(CobraMod.MOD_ID, "wooden_flute"),
-        new Item((new Item.Properties()).group(ItemGroup.FOOD).food(ModItems.FOOD_FLESH_STEW)).setRegistryName("flesh_stew")
+        new Item((new Item.Properties()).group(ItemGroup.FOOD).food(Foods.FOOD_FLESH_STEW)).setRegistryName("flesh_stew")
         
       );
-    ModEntities.registerEntitySpawnEggs(event);
+    RegisterEntities.registerEntitySpawnEggs(event);
   }
 
   @SubscribeEvent
@@ -44,7 +45,7 @@ public class CobraModRegistries {
         EntityType.Builder.create(SnakeEntity::new, EntityClassification.CREATURE).build(CobraMod.MOD_ID + ":green_snake")
         .setRegistryName(CobraMod.MOD_ID, "green_snake")
         );
-    ModEntities.registerEntityWorldSpawns();
+    RegisterEntities.registerEntityWorldSpawns();
   }
 
   /**

@@ -17,5 +17,4 @@ public class ModItems {
   public static final Item vertical_oak_slab = null;
   public static final Item green_snake_egg = null;
   
-  public static final Food FOOD_FLESH_STEW = (new Food.Builder()).hunger(8).saturation(1.0F).meat().build();
 }
