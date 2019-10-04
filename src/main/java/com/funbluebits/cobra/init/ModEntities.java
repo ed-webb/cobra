@@ -19,7 +19,6 @@ public class ModEntities {
 //  public static EntityType<?> green_snake = null; // TODO final 
   
   public static final EntityType<?> green_snake = EntityType.Builder.create(SnakeEntity::new, EntityClassification.CREATURE).build(CobraMod.MOD_ID + ":green_snake")
-      .setRegistryName(CobraMod.MOD_ID, "green_snake");
-  
+      .setRegistryName(CobraMod.MOD_ID, "green_snake");  
 
 }

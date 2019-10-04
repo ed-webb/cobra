@@ -42,8 +42,7 @@ public class CobraModRegistries {
   @SubscribeEvent
   public static void registerEntities(final RegistryEvent.Register<EntityType<?>> event) {
     event.getRegistry().registerAll(
-        EntityType.Builder.create(SnakeEntity::new, EntityClassification.CREATURE).build(CobraMod.MOD_ID + ":green_snake")
-        .setRegistryName(CobraMod.MOD_ID, "green_snake")
+        ModEntities.green_snake
         );
     RegisterEntities.registerEntityWorldSpawns();
   }

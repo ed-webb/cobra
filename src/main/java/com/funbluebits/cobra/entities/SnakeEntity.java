@@ -1,5 +1,6 @@
 package com.funbluebits.cobra.entities;
 
+import com.funbluebits.cobra.RegisterEntities;
 import com.funbluebits.cobra.init.ModEntities;
 
 import net.minecraft.entity.CreatureEntity;
