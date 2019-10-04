@@ -1,6 +1,3 @@
 {
-    "parent": "cobra:block/vertical_oak_slab",
-    "textures": {
-        "layer0": "cobra:item/vertical_oak_slab"
-     }
+    "parent": "cobra:block/vertical_oak_slab"
 }
