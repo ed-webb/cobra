@@ -45,6 +45,7 @@ public class CobraModRegistries {
         ModEntities.green_snake
         );
     RegisterEntities.registerEntityWorldSpawns();
+//    RegisterEntities.registerEntityAnimations();
   }
 
   /**

@@ -8,7 +8,11 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.SpawnEggItem;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.model.ModelLoaderRegistry;
 import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.event.RegistryEvent;
 
@@ -55,5 +59,10 @@ public class RegisterEntities {
     
   }
 
-
+  @OnlyIn(Dist.CLIENT)
+  public static void registerEntityAnimations() {
+    ResourceLocation location = new ResourceLocation(CobraMod.MOD_ID, "asms/entity/green_snake.json");
+    ModelLoaderRegistry.loadASM(location, null);
+  }
+  
 }
