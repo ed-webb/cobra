@@ -16,5 +16,6 @@ public class ModItems {
   public static final Item chalk_block = null;
   public static final Item vertical_oak_slab = null;
   public static final Item green_snake_egg = null;
-  
+  public static final Item snake_scale = null;
+  public static final Item snake_meat = null;
 }

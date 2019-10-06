@@ -16,7 +16,7 @@ import net.minecraftforge.fml.client.registry.IRenderFactory;
 public class SnakeRenderer extends LivingRenderer<SnakeEntity, SnakeModel> {
 
   public SnakeRenderer(EntityRendererManager manager) {
-    super(manager, new SnakeModel(), 1.0f);
+    super(manager, new SnakeModel(), 0.2f); // 3rd param is shadow size? 1.0f is quite big
   }
 
   @Override
@@ -33,4 +33,3 @@ public class SnakeRenderer extends LivingRenderer<SnakeEntity, SnakeModel> {
     
   }
 }
-// TODO see https://github.com/kvverti/enim/blob/master/src/main/java/kvverti/enim/entity/SlimeRender.java

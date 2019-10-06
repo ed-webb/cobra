@@ -33,7 +33,9 @@ public class CobraModRegistries {
         new Item(new Item.Properties().maxStackSize(1).group(ItemGroup.MISC)).setRegistryName(CobraMod.MOD_ID, "oak_pole"),
         new BlockItem(ModBlocks.vertical_oak_slab, new Item.Properties().maxStackSize(64).group(ItemGroup.MISC)).setRegistryName(CobraMod.MOD_ID, "vertical_oak_slab"),
         new Item(new Item.Properties().maxStackSize(16).group(ItemGroup.MISC)).setRegistryName(CobraMod.MOD_ID, "wooden_flute"),
-        new Item((new Item.Properties()).group(ItemGroup.FOOD).food(Foods.FOOD_FLESH_STEW)).setRegistryName("flesh_stew")
+        new Item((new Item.Properties()).group(ItemGroup.FOOD).food(Foods.FOOD_FLESH_STEW)).setRegistryName("flesh_stew"),
+        new Item(new Item.Properties().maxStackSize(64).group(ItemGroup.MISC)).setRegistryName(CobraMod.MOD_ID, "snake_scale"),
+        new Item(new Item.Properties().maxStackSize(64).group(ItemGroup.MISC)).setRegistryName(CobraMod.MOD_ID, "snake_meat")
         
       );
     RegisterEntities.registerEntitySpawnEggs(event);
