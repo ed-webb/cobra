@@ -27,7 +27,7 @@ public class RegisterEntities {
 //
   public static void registerEntitySpawnEggs(final RegistryEvent.Register<Item> event) {
     event.getRegistry().registerAll(
-       registerEntitySpawnEgg(ModEntities.green_snake, 0x156b1a, 0xfaef1e, "green_snake_egg")   // green and yellow
+       registerEntitySpawnEgg(ModEntities.GREEN_SNAKE, 0x156b1a, 0xfaef1e, "green_snake_egg")   // green and yellow
         );
   }
   
@@ -39,7 +39,7 @@ public class RegisterEntities {
   }
   
   public static void registerEntityWorldSpawns() {
-    registerEntityWorldSpawn(ModEntities.green_snake); // TODO change to monster??
+    registerEntityWorldSpawn(ModEntities.GREEN_SNAKE); // TODO change to monster??
     
   }
   

@@ -16,7 +16,7 @@ import net.minecraftforge.fml.client.registry.IRenderFactory;
 public class SnakeRenderer extends LivingRenderer<SnakeEntity, SnakeModel> {
 
   public SnakeRenderer(EntityRendererManager manager) {
-    super(manager, new SnakeModel(), 0.2f); // 3rd param is shadow size? 1.0f is quite big
+    super(manager, new SnakeModel(), 0.1f); // 3rd param is shadow size? 0.1f is small but okay for a snake.
   }
 
   @Override

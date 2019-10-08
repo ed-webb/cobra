@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "fff",
+        "pcp",
+        " b "
+    ],
+    "key":
+    {
+        "f":
+        {
+            "item": "minecraft:rotten_flesh"
+        }
+        ,"p":
+        {
+            "item": "minecraft:potato"
+        }
+        ,"c":
+        {
+            "item": "minecraft:carrot"
+        }
+        ,"b":
+        {
+            "item": "minecraft:bowl"
+        }
+    },
+    "result":
+    {
+        "item": "snakesnpistons:flesh_stew"
+    }
+}

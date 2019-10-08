@@ -4,6 +4,7 @@ import com.funbluebits.cobra.blocks.VerticalSlabBlock;
 import com.funbluebits.cobra.entities.SnakeEntity;
 import com.funbluebits.cobra.init.ModBlocks;
 import com.funbluebits.cobra.init.ModItems;
+import com.funbluebits.cobra.items.CobraArmorMaterial;
 import com.funbluebits.cobra.items.Foods;
 import com.funbluebits.cobra.init.ModEntities;
 
@@ -11,6 +12,9 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.ArmorItem;
+import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -29,14 +33,17 @@ public class CobraModRegistries {
         
         // stackable to 64, add to Creative MISC tab, register the item.
         new Item(new Item.Properties().maxStackSize(64).group(ItemGroup.MISC)).setRegistryName(CobraMod.MOD_ID, "chalk_dust"),
-        new BlockItem(ModBlocks.chalk_block, new Item.Properties().maxStackSize(64).group(ItemGroup.MISC)).setRegistryName(CobraMod.MOD_ID, "chalk_block"),
+        new BlockItem(ModBlocks.CHALK_BLOCK, new Item.Properties().maxStackSize(64).group(ItemGroup.MISC)).setRegistryName(CobraMod.MOD_ID, "chalk_block"),
         new Item(new Item.Properties().maxStackSize(1).group(ItemGroup.MISC)).setRegistryName(CobraMod.MOD_ID, "oak_pole"),
-        new BlockItem(ModBlocks.vertical_oak_slab, new Item.Properties().maxStackSize(64).group(ItemGroup.MISC)).setRegistryName(CobraMod.MOD_ID, "vertical_oak_slab"),
+        new BlockItem(ModBlocks.VERTICAL_OAK_SLAB, new Item.Properties().maxStackSize(64).group(ItemGroup.MISC)).setRegistryName(CobraMod.MOD_ID, "vertical_oak_slab"),
         new Item(new Item.Properties().maxStackSize(16).group(ItemGroup.MISC)).setRegistryName(CobraMod.MOD_ID, "wooden_flute"),
         new Item((new Item.Properties()).group(ItemGroup.FOOD).food(Foods.FOOD_FLESH_STEW)).setRegistryName("flesh_stew"),
         new Item(new Item.Properties().maxStackSize(64).group(ItemGroup.MISC)).setRegistryName(CobraMod.MOD_ID, "snake_scale"),
-        new Item(new Item.Properties().maxStackSize(64).group(ItemGroup.MISC)).setRegistryName(CobraMod.MOD_ID, "snake_meat")
-        
+        new Item(new Item.Properties().maxStackSize(64).group(ItemGroup.MISC)).setRegistryName(CobraMod.MOD_ID, "snake_meat"),
+        new ArmorItem(CobraArmorMaterial.SNAKE, EquipmentSlotType.HEAD, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName(CobraMod.MOD_ID, "snake_helmet"),
+        new ArmorItem(CobraArmorMaterial.SNAKE, EquipmentSlotType.CHEST, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName(CobraMod.MOD_ID, "snake_chestplate"),
+        new ArmorItem(CobraArmorMaterial.SNAKE, EquipmentSlotType.LEGS, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName(CobraMod.MOD_ID, "snake_leggings"),
+        new ArmorItem(CobraArmorMaterial.SNAKE, EquipmentSlotType.FEET, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName(CobraMod.MOD_ID, "snake_boots")
       );
     RegisterEntities.registerEntitySpawnEggs(event);
   }
@@ -44,7 +51,7 @@ public class CobraModRegistries {
   @SubscribeEvent
   public static void registerEntities(final RegistryEvent.Register<EntityType<?>> event) {
     event.getRegistry().registerAll(
-        ModEntities.green_snake
+        ModEntities.GREEN_SNAKE
         );
     RegisterEntities.registerEntityWorldSpawns();
 //    RegisterEntities.registerEntityAnimations();

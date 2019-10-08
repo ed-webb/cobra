@@ -12,11 +12,11 @@ loaderVersion="[28,)" #mandatory (28 is current forge version)
 # A list of mods - how many allowed here is determined by the individual mod loader
 [[mods]] #mandatory
 # The modid of the mod
-modId="cobra" #mandatory
+modId="snakesnpistons" #mandatory
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
 version="${file.jarVersion}" #mandatory
  # A display name for the mod
-displayName="Cobra Mod" #mandatory
+displayName="Snakes n Pistons Mod" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification <here>
 #updateJSONURL="http://myurl.me/" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
@@ -24,11 +24,11 @@ displayName="Cobra Mod" #mandatory
 # A file name (in the root of the mod JAR) containing a logo for display
 #logoFile="cobramod.png" #optional
 # A text field displayed in the mod UI
-credits="Thanks for cobra mod goes to Sarah and Samuel" #optional
+credits="Thanks for Snakes n Pistons mod goes to Sarah and Samuel" #optional
 # A text field displayed in the mod UI
-authors="Sarah and Samuel" #optional
+authors="Sarah and Samuel and dante595" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
 This is the start of a mod which will include a variety of blocks, items and entities.
-
+But mainly snakes n pistons.
 '''

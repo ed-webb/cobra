@@ -23,10 +23,10 @@ import com.funbluebits.cobra.client.renders.CobraRenderRegistry;
 import com.funbluebits.cobra.init.ModBlocks;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod("cobra")
+@Mod("snakesnpistons")
 public class CobraMod
 {
-    public static final String MOD_ID = "cobra";
+    public static final String MOD_ID = "snakesnpistons";
     
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
@@ -60,7 +60,7 @@ public class CobraMod
           for (BiomeManager.BiomeEntry entry : BiomeManager.getBiomes(biomeType)) {
             entry.biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,   
                 Biome.createDecoratedFeature(Feature.ORE,
-                    new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.chalk_block.getDefaultState(), size), placementIn, crc));
+                    new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.CHALK_BLOCK.getDefaultState(), size), placementIn, crc));
           }
         }
     }

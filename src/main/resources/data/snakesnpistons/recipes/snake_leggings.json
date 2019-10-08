@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "sss",
+        "s s",
+        "s s"
+    ],
+    "key":
+    {
+        "s":
+        {
+            "item": "snakesnpistons:snake_scale"
+        }
+    },
+    "result":
+    {
+        "item": "snakesnpistons:snake_leggings"
+    }
+}

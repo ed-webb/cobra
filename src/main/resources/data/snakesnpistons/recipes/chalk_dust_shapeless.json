@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "snakesnpistons:chalk_block"
+        }
+    ],
+    "result":
+    {
+        "item": "snakesnpistons:chalk_dust",
+        "count": 4
+    }
+}
