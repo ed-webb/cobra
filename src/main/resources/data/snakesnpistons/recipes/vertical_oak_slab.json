@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "x",
+        "x",
+        "x"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "minecraft:oak_planks"
+        }
+    },
+    "result":
+    {
+        "item": "snakesnpistons:vertical_oak_slab",
+        "count": 6
+    }
+}

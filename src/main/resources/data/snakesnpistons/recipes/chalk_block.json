@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xx",
+        "xx"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "snakesnpistons:chalk_dust"
+        }
+    },
+    "result":
+    {
+        "item": "snakesnpistons:chalk_block"
+    }
+}

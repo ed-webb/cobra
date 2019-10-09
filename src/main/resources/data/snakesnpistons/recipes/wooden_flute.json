@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "b b",
+        "sss"
+    ],
+    "key":
+    {
+        "b":
+        {
+            "item": "minecraft:oak_button"
+        }
+        ,"s":
+        {
+            "item": "minecraft:stick"
+        }
+    },
+    "result":
+    {
+        "item": "snakesnpistons:wooden_flute"
+    }
+}

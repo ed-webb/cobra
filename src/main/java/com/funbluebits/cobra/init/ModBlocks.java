@@ -8,7 +8,7 @@ import net.minecraftforge.registries.ObjectHolder;
 @ObjectHolder(CobraMod.MOD_ID)
 public class ModBlocks {
 
-  public static final Block chalk_block = null;
-  public static final Block vertical_oak_slab = null;
+  public static final Block CHALK_BLOCK = null;
+  public static final Block VERTICAL_OAK_SLAB = null;
 
 }

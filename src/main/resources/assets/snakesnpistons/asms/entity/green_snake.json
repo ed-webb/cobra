@@ -1,0 +1,16 @@
+{
+  "parameters": {
+    "anim_cycle": ["/", 1]
+  },
+  "clips": {
+    "default": ["apply", "snakesnpistons:entity/green_snake@default", 2 ]
+  },
+  "states": [
+    "default", "moving"
+  ],
+  "transitions": {
+    "default": "moving",
+    "moving": "default"
+  },
+  "start_state": "default"
+}

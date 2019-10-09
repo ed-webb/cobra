@@ -1,0 +1,16 @@
+{
+    "variants": {
+        "facing=north": [
+            { "model": "snakesnpistons:block/vertical_oak_slab" }
+        ]
+        ,"facing=south": [
+            { "model": "snakesnpistons:block/vertical_oak_slab", "y": 180 }
+        ]
+        ,"facing=east": [
+            { "model": "snakesnpistons:block/vertical_oak_slab", "y": 90 }
+        ]
+        ,"facing=west": [
+            { "model": "snakesnpistons:block/vertical_oak_slab", "y": 270 }
+        ]
+    }
+}

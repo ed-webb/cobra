@@ -8,7 +8,11 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.SpawnEggItem;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.model.ModelLoaderRegistry;
 import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.event.RegistryEvent;
 
@@ -23,7 +27,7 @@ public class RegisterEntities {
 //
   public static void registerEntitySpawnEggs(final RegistryEvent.Register<Item> event) {
     event.getRegistry().registerAll(
-       registerEntitySpawnEgg(ModEntities.green_snake, 0x156b1a, 0xfaef1e, "green_snake_egg")   // green and yellow
+       registerEntitySpawnEgg(ModEntities.GREEN_SNAKE, 0x156b1a, 0xfaef1e, "green_snake_egg")   // green and yellow
         );
   }
   
@@ -35,7 +39,7 @@ public class RegisterEntities {
   }
   
   public static void registerEntityWorldSpawns() {
-    registerEntityWorldSpawn(ModEntities.green_snake); // TODO change to monster??
+    registerEntityWorldSpawn(ModEntities.GREEN_SNAKE); // TODO change to monster??
     
   }
   
@@ -55,5 +59,10 @@ public class RegisterEntities {
     
   }
 
-
+  @OnlyIn(Dist.CLIENT)
+  public static void registerEntityAnimations() {
+    ResourceLocation location = new ResourceLocation(CobraMod.MOD_ID, "asms/entity/green_snake.json");
+    ModelLoaderRegistry.loadASM(location, null);
+  }
+  
 }

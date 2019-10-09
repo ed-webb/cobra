@@ -15,7 +15,7 @@ apply plugin: 'maven-publish'
 
 version = '1.14.4-0.0.1.0'
 group = 'com.funbluebits.cobra' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'cobra'
+archivesBaseName = 'snakesnpistons'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
@@ -115,7 +115,7 @@ dependencies {
 jar {
     manifest {
         attributes([
-            "Specification-Title": "Cobra mod for MC",
+            "Specification-Title": "Snakes n Pistons mod for MC",
             "Specification-Vendor": "Fun Blue Bits",
             "Specification-Version": "1", // We are version 1 of ourselves
             "Implementation-Title": project.name,
