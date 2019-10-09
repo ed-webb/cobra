@@ -1,5 +1,6 @@
 package com.funbluebits.cobra;
 
+import com.funbluebits.cobra.blocks.SuperPistonBlock;
 import com.funbluebits.cobra.blocks.VerticalSlabBlock;
 import com.funbluebits.cobra.entities.SnakeEntity;
 import com.funbluebits.cobra.init.ModBlocks;
@@ -69,8 +70,9 @@ public class CobraModRegistries {
       event.getRegistry().registerAll(
 
           new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(5).harvestLevel(1).harvestTool(ToolType.PICKAXE)).setRegistryName(CobraMod.MOD_ID, "chalk_block"),
-          new VerticalSlabBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(5).harvestLevel(1).harvestTool(ToolType.AXE)).setRegistryName(CobraMod.MOD_ID, "vertical_oak_slab")
-
+          new VerticalSlabBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(5).harvestLevel(1).harvestTool(ToolType.AXE)).setRegistryName(CobraMod.MOD_ID, "vertical_oak_slab"),
+          new SuperPistonBlock(false, Block.Properties.create(Material.PISTON).hardnessAndResistance(0.5F).harvestLevel(1).harvestTool(ToolType.PICKAXE)).setRegistryName(CobraMod.MOD_ID, "super_piston"),
+          new SuperPistonBlock(true, Block.Properties.create(Material.PISTON).hardnessAndResistance(0.5F).harvestLevel(1).harvestTool(ToolType.PICKAXE)).setRegistryName(CobraMod.MOD_ID, "super_sticky_piston")
       );
   }
 
