@@ -2,11 +2,11 @@ package com.funbluebits.cobra.items;
 
 import java.util.function.Supplier;
 
+import com.funbluebits.cobra.CobraMod;
 import com.funbluebits.cobra.init.ModItems;
 
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
-import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.LazyLoadBase;
 import net.minecraft.util.SoundEvent;
@@ -15,7 +15,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 public enum CobraArmorMaterial implements IArmorMaterial {
-  SNAKE("snake", 25, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_TURTLE, 0.0F, () -> {
+  SNAKE(CobraMod.MOD_ID + ":snake", 25, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_TURTLE, 0.0F, () -> {
     return Ingredient.fromItems(ModItems.SNAKE_SCALE);
   });
 
