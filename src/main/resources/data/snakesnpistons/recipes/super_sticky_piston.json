@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "snakesnpistons:super_piston"
+        },
+        {
+        	"item": "minecraft:slime_ball"
+        }
+    ],
+    "result":
+    {
+        "item": "snakesnpistons:super_sticky_piston",
+        "count": 1
+    }
+}

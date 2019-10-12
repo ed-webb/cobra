@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "ppp",
+        "cic",
+        "crc"
+    ],
+    "key":
+    {
+        "p":
+        {
+            "item": "minecraft:oak_planks"
+        }
+        ,"c":
+        {
+            "item": "minecraft:cobblestone"
+        }
+        ,"i":
+        {
+            "item": "minecraft:iron_block"
+        }
+        ,"r":
+        {
+            "item": "minecraft:redstone_block"
+        }
+    },
+    "result":
+    {
+        "item": "snakesnpistons:super_piston"
+    }
+}

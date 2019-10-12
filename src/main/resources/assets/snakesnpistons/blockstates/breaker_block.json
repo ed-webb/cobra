@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": [
+            { "model": "snakesnpistons:block/breaker_block" }
+        ]
+    }
+}
