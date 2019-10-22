@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "ccc",
+        "pcp",
+        " b "
+    ],
+    "key":
+    {
+        "c":
+        {
+            "item": "minecraft:cooked_chicken"
+        }
+        ,"p":
+        {
+            "item": "minecraft:potato"
+        }
+        ,"c":
+        {
+            "item": "minecraft:carrot"
+        }
+        ,"b":
+        {
+            "item": "minecraft:bowl"
+        }
+    },
+    "result":
+    {
+        "item": "snakesnpistons:chicken_soup"
+    }
+}

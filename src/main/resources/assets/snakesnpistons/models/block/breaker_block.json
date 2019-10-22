@@ -1,6 +1,8 @@
 {
-    "parent": "block/cube_all",
+    "parent": "block/orientable",
     "textures": {
-        "all": "snakesnpistons:block/breaker_block"
+        "top": "block/furnace_top",
+        "front": "block/furnace_front",
+        "side": "block/furnace_side"
     }
 }
