@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "f"
+    ],
+    "key":
+    {
+        "f":
+        {
+            "item": "minecraft:oak_leaves"
+
+        }
+    },
+    "result":
+    {
+        "item": "snakesnpistons:cabbage"
+    }
+}

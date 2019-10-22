@@ -21,5 +21,7 @@ public class ModItems {
   public static final Item SNAKE_CHESTPLATE = null;
   public static final Item SNAKE_LEGGINGS = null;
   public static final Item SNAKE_BOOTS = null;
-  
+  public static final Item SUPER_PISTON = null;
+  public static final Item SUPER_STICKY_PISON = null;
+  public static final Item BREAKER_BLOCK = null;
 }
